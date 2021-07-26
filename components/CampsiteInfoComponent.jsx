@@ -40,4 +40,4 @@ class CampsiteInfo extends Component {
     }
 }
 
-export default CampsiteInfo;
+export default CampsiteInfo; 
