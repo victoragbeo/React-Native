@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { FlatList,Text, View, ScrollView } from 'react-native';
-import { ListItem } from 'react-native-elements';
-import { Card } from 'react-native-elements';
+import { Card, ListItem } from 'react-native-elements';
 import {PARTNERS} from '../shared/partners'
 
 function Mission(props) {
@@ -21,7 +20,7 @@ function Mission(props) {
 }
 
 
-export class About extends Component {
+class About extends Component {
     constructor(props){
         super(props);
         this.state= {partners: PARTNERS} 
