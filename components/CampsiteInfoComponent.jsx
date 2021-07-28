@@ -66,6 +66,10 @@ class CampsiteInfo extends Component {
 
     }
 
+    markFavorite() {
+        this.setState({favorite: true});
+    }
+
     static navigationOptions = {
         title: 'Campsite Information'
     }
@@ -76,7 +80,10 @@ class CampsiteInfo extends Component {
         const comments = this.state.comments.filter(comment => comment.campsiteId === campsiteId);
         return (
             <ScrollView>
-                <RenderCampsite campsite={campsite} />
+                <RenderCampsite campsite={campsite}
+                    favorite={this.state.favorite}
+                    markFavorite={() => this.markFavorite()}
+                />
                 <RenderComments comments={comments} />
             </ScrollView>
         );
